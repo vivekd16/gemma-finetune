@@ -6,12 +6,13 @@ import asyncio
 import nest_asyncio
 import warnings
 from functools import partial
+from asyncio.windows_events import WindowsSelectorEventLoopPolicy
 
 # Filter out specific warnings
 warnings.filterwarnings('ignore', category=FutureWarning, module='huggingface_hub.file_download')
 
 # Configure asyncio event loop
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 nest_asyncio.apply()
 
 st.set_page_config(page_title="Gemma Fine-tuning Interface", layout="wide")
