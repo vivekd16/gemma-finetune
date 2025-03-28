@@ -1,0 +1,8 @@
+streamlit>=1.32.0
+torch>=2.2.0
+transformers>=4.38.0
+datasets>=2.17.0
+accelerator>=0.27.0
+typing>=3.7.4
+pandas>=2.2.0
+numpy>=1.26.0
